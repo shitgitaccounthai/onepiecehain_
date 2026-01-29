@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | BSMS Physics Student</title>
+    <style>
+        :root {
+            /* Academic Colors */
+            --primary: #2c3e50; 
+            --accent: #3498db;
+            /* One Piece Themed Colors for the Hobby Section */
+            --op-red: #e74c3c;
+            --op-gold: #f1c40f;
+            
+            --bg: #f4f4f9;
+            --text: #333;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background: var(--bg);
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: var(--primary);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+        header h1 { margin: 0; font-size: 2.5rem; }
+        header p { font-size: 1.2rem; opacity: 0.9; margin-top: 10px; }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        section {
+            background: white;
+            margin-bottom: 2rem;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        
+        h2 { border-bottom: 2px solid var(--accent); padding-bottom: 10px; color: var(--primary); }
+        
+        /* Grid for Projects */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .card {
+            background: #fafafa;
+            border: 1px solid #eee;
+            padding: 15px;
+            border-radius: 5px;
+            transition: transform 0.2s;
+        }
+        .card:hover { transform: translateY(-3px); border-color: var(--accent); }
+        .card h3 { margin-top: 0; color: var(--primary); }
+        
+        .tag {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            margin-right: 5px;
+            margin-top: 5px;
+        }
+
+        /* ONE PIECE SPECIFIC STYLES */
+        .op-section h2 {
+            border-bottom: 2px solid var(--op-red);
+            color: var(--op-red);
+        }
+        
+        .saga-container {
+            margin-bottom: 15px;
+            border-left: 4px solid var(--op-gold);
+            padding-left: 15px;
+            background: #fffdf0; /* Slight yellow tint */
+            padding: 10px 15px;
+        }
+        
+        .saga-title {
+            font-weight: bold;
+            color: #d35400;
+            margin-bottom: 5px;
+            display: block;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .arc-list {
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        footer { text-align: center; padding: 2rem; color: #777; font-size: 0.9rem; }
+        a { color: var(--accent); text-decoration: none; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>BSMS Physics Student</h1>
+    <p>Researcher & Developer | IISER Pune</p>
+    <p style="font-size: 0.9rem; margin-top: 15px;">
+        <a href="https://github.com/YOURUSERNAME" style="color: white; margin: 0 10px;">GitHub</a> | 
+        <a href="mailto:your.email@iiserpune.ac.in" style="color: white; margin: 0 10px;">Email</a>
+    </p>
+</header>
+
+<div class="container">
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>
+            I am a <strong>3rd-year BSMS student at IISER Pune</strong> interested in the intersection of 
+            <strong>Plasma Physics</strong> (dusty plasma, astrophysics) and <strong>Condensed Matter</strong>. 
+            I also build Python tools for lab automation and simulations.
+        </p>
+    </section>
+
+    <section id="research">
+        <h2>Research Interests</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Plasma Physics</h3>
+                <p>Dusty plasma dynamics, plasma crystals, and astrophysical connections.</p>
+            </div>
+            <div class="card">
+                <h3>Condensed Matter</h3>
+                <p>Crystal growth (Optical Floating Zone) and magnetic thermoelectrics (Ag₂Se, Bi₂Te₃).</p>
+            </div>
+            <div class="card">
+                <h3>Quantum Mechanics</h3>
+                <p>Fundamental quantum systems and spin-momentum coupling.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Computational Projects</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Van der Pauw Simulation</h3>
+                <p>Python (Pygame) simulation for visualizing resistivity measurements.</p>
+                <span class="tag">Python</span> <span class="tag">Physics</span>
+            </div>
+            <div class="card">
+                <h3>Desktop Task Widget</h3>
+                <p>A persistent Windows widget built with Tkinter.</p>
+                <span class="tag">Tkinter</span> <span class="tag">Productivity</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="one-piece" class="op-section">
+        <h2>The Grand Line (Interests)</h2>
+        <p>When I'm not in the lab, I am exploring the world of <strong>One Piece</strong>. Below is a reference archive of the journey.</p>
+        
+        <div class="grid">
+            <div class="card">
+                <h3>1. East Blue Saga</h3>
+                <div class="saga-container">
+                    <span class="arc-list">Romance Dawn • Orange Town • Syrup Village • Baratie • Arlong Park • Loguetown</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>2. Alabasta Saga</h3>
+                <div class="saga-container">
+                    <span class="arc-list">Reverse Mountain • Whisky Peak • Little Garden • Drum Island • Alabasta</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>3. Sky Island Saga</h3>
+                <div class="saga-container">
+                    <span class="arc-list">Jaya • Skypiea</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>4. Water 7 Saga</h3>
+                <div class="saga-container">
+                    <span class="arc-list">Long Ring Long Land • Water 7 • Enies Lobby • Post-Enies Lobby</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>5. Thriller Bark Saga</h3>
+                <div class="saga-container">
+                    <span class="arc-list">Thriller Bark</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>6. Summit War Saga</h3>
+                <div class="saga-container">
+                    <span class="arc-list">Sabaody Archipelago • Amazon Lily • Impel Down • Marineford • Post-War</span>
+                </div>
+            </div>
+        </div>
+
+        <h3 style="margin-top: 30px; color: var(--op-red); border-bottom: 1px solid #ccc;">The New World</h3>
+        
+        <div class="grid" style="margin-top: 20px;">
+            <div class="card">
+                <h3>7. Fish-Man Island Saga</h3>
+                <div class="saga-container">
+                    <span class="arc-list">Return to Sabaody • Fish-Man Island</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>8. Dressrosa Saga</h3>
+                <div class="saga-container">
+                    <span class="arc-list">Punk Hazard • Dressrosa</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>9. Four Emperors Saga</h3>
+                <div class="saga-container">
+                    <span class="arc-list">Zou • Whole Cake Island • Levely • Wano Country</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>10. Final Saga</h3>
+                <div class="saga-container">
+                    <span class="arc-list">Egghead • Elbaf (Current)</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+<footer>
+    <p>&copy; 2026 BSMS Physics Student. To be continued...</p>
+</footer>
+
+</body>
+</html>
